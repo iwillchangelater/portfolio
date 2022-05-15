@@ -1,0 +1,121 @@
+.body {
+  align-content: center;
+}
+/* navigator */
+.body-navitator {
+  display: flex;
+  margin: auto;
+  width: max-content;
+  background: var(--color-primary);
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+.body-navigatior-item {
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  color: white;
+}
+.body-navigatior-item.active {
+  background: white;
+  color: black;
+  border-radius: 1rem;
+}
+/* about */
+.BodyDisplay {
+  margin: auto;
+  width: 80%;
+}
+
+.body-about {
+  display: flex;
+}
+.body-about .about-img {
+  width: 40%;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.body-about-content {
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  font-size: large;
+  line-height: 2rem;
+}
+/* skills */
+.body-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.body-skills .front,
+.body-skills .back {
+  width: 90%;
+  border: 1px solid var(--color-primary);
+  border-radius: 2rem;
+}
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid transparent;
+  border-radius: 2rem 2rem 3rem 3rem;
+  font-weight: bolder;
+  font-size: x-large;
+  color: white;
+  background-color: #0080ffd0;
+}
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  justify-content: center;
+}
+.skills-list .icon-container {
+  width: min-content;
+  padding: 1rem;
+}
+/* project */
+.Body-project {
+  width: 80%;
+  margin: auto;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 1024px) {
+  /* skill */
+  .skills-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .BodyDisplay {
+    margin: auto;
+    width: 100%;
+    margin: 0 1rem;
+  }
+  .Body-project {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* skill */
+  .body-skills {
+    grid-template-columns: 1fr;
+    width: fit-content;
+    margin: auto;
+  }
+  /* about */
+  .body-about {
+    display: inline;
+  }
+  .body-about .about-img {
+    width: 95%;
+  }
+  .Body-project {
+    width: 95%;
+    margin: 0;
+  }
+}

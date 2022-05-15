@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Nav from "./components/Nav/Nav.jsx";
+import Main from "./components/Main/Main.jsx";
+import Body from "./components/Body/Body.jsx";
+import Contact from "./components/Contact/Contact.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import { IconContext } from "react-icons";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IconContext.Provider value={{ color: "#429ae8", size: "2em" }}>
+      <Nav />
+      <Main />
+      <Body />
+      <Contact />
+      <Footer />
+    </IconContext.Provider>
   );
 }
 
